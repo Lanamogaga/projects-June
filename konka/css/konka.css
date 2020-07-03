@@ -86,11 +86,12 @@ body{overflow:scroll;overflow-x:hidden;
     background: #f7f7f7;
 }
 .nav{
-    width: 1140px;
-    height: 50px;
+    width: 1138px;
+    height: 48px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.3);
     background: #f4f4f4;
     margin: 0 auto;
+    border: 1px solid #f7f7f7 ;
 }
 .logo{
     width: 131px;
@@ -330,7 +331,9 @@ body{overflow:scroll;overflow-x:hidden;
     transform: all 5s;
     
 }
-.star-list li{
+.star-list li,
+.frg-list li,
+.wash-list li{
     float: left;
 }
 
@@ -351,12 +354,24 @@ body{overflow:scroll;overflow-x:hidden;
     background: #f7f7f7;
     text-align: center;
 }
+.frg-box,.wash-box{
+    background: #fff;
+}
 
-.star-top h3 a{
+.star-top h3 a,
+.tv-top h3 a,
+.frg-top h3 a,
+.wash-top h3 a,
+.appliances-top h3 a{
     color: #767676;
     font-size: 22px;
     line-height: 50px;
 }
+.star-top h3 img
+{
+    margin-right: 10px;
+}
+
 
 /*  */
 
@@ -366,63 +381,137 @@ body{overflow:scroll;overflow-x:hidden;
     background:#f7f7f7 ;
     padding-top: 30px;
 }
-.wrap .television{
+.wrap .television,
+.Refrigerator,
+.wash,
+.appliances{
     width: 1140px;
     height: 1170px;
     margin: 0 auto;
     /* border: 1px solid #000; */
     
 }
-.tv-top{
+.tv-top,
+.frg-top,
+.wash-top,
+.appliances-top{
     width: 1140px;
     height: 50px;
     box-sizing: border-box;
     margin: 20px 0 10px;
     position: relative;
 }
-.tv-top h3,.tv-top ul{
+.tv-top h3,.tv-top ul,
+.frg-top h3,.frg-top ul,
+.wash-top h3,.wash-top ul,
+.appliances-top h3,.appliances-top ul{
     position: absolute;
     line-height: 50px;
 }
-.tv-top ul li{
+
+.tv-top ul li,
+.frg-top ul li,
+.wash-top ul li,
+.appliances-top ul li{
     float: left;
     font-size: 14px;
     margin-right: 4px;
 }
-.tv-top h3 img{
+.tv-top h3 img,
+.frg-top h3 img,
+.wash-top h3 img,
+.appliances-top h3 img{
     display: inline-block;
     vertical-align: middle;
+    margin-right: 10px;
 }
-.tv-top ul{
-    width: 235px;
-    height: 20px;
+.tv-top ul,
+.frg-top ul,
+.wash-top ul,
+.appliances-top ul{
+    width: 240px;
+    height: 50px;
     padding-left: 40px;
-    left:865px ;
+   right: 0;
 }
-.tv-row li{
+.frg-top ul{
+    width: 285px;
+    /* left:822px ; */
+}
+.wash-top ul{
+    width: 220px;
+}
+.part-top ul{
+    width: 190px;
+}
+
+
+
+
+/* .tv-row li{
+    
+} */
+.tv-top li a,
+.frg-top li a,
+.wash-top li a,
+.appliances-top li a{
+    color: #000;
+    padding-right: 5px;
+}
+.tv-top .last,
+.frg-top .last,
+.wash-top .last,
+.appliances-top .last{
+    color:rgb(255, 91, 87) ;
+    padding-right: 0;
+}
+
+.tv-row li,
+.frg-list li,
+.wash-list li,
+.appliances-list li{
     width: 250px;
     height: 305px;
     background: #fff;
-}
-.tv-row li{
     float: left;
     margin-top: 20px;
     margin-left: 20px;
     padding: 25px 10px 10px;
     
 }
-.tv-row ul{
+
+.tv-row ul,
+.frg-list,
+.wash-list,
+.appliances-list{
     width: 1160px;
     height: 720px;
     margin-left: -20px;
+    
 }
-.tv-row li img{
+.tv-row li img,
+.frg-list img,
+.wash-list img,
+.appliances-list img{
     width: 190px;
     height: 190px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 /* .tv-row li:hover{
     transform: translateZ(2%);
     transition: 1s;
     
 } */
+
+
+.wash,
+.appliances{
+    height: 810px;
+    margin-top: 30px;
+}
+
+
+
+
+

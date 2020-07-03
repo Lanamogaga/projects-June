@@ -170,16 +170,84 @@
                                         <img src=${item.src}>
                                         <div class="star-title">${item.title}</div>
                                         <div class="star-dis">${item.dis}</div>
-                                        <div class="star-newprice">${item.newprice}</div>
-                                        <div class="star-oldprice">${item.oldprice}</div>
+                                            <p class="star-newprice star-price">${item.newprice}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
                                     </div>                       
                                     </li>`    
                                 }).join("");
                                 ul.innerHTML=html;              
                             })
+
+                            
                         }
                 
                     </script>
+                    <style>
+                        .star-title,
+                        .tv-row h4,
+                        .frg-title
+                        {
+                        width: 200px;
+                        height: 30px;
+                        margin: 0 25px;
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: #222;
+                        padding-top: 15px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        }
+
+                        .tv-row h4,
+                        .frg-title{
+                            padding: 0;
+                            text-align: center;
+                        }
+                        .tv-row span{
+                            display: block;
+                            text-align: center;
+                        }
+                        .star-dis,
+                        .tv-row span,
+                        .frg-dis,.dis{
+                            width: 200px;
+                            height: 30px;
+                            line-height: 30px;
+                            color: #989898;
+                            font-size: 14px;
+                            /* box-sizing: border-box; */
+                            margin: 0 25px;
+                            text-align: center;
+                          
+                        }
+                        .star-price,
+                        .tv-row,
+                        .frg-price,
+                        .price{
+                            width: 250px;
+                            height: 30px;
+                            font-size: 14px;
+                            color: #ed1c24;
+                            line-height: 30px;
+                            text-align: center;
+                        }
+                        /* .star-price div{
+                            
+                            margin-left: 20px;
+                            
+                        } */
+                        /* .tv-row p,{
+                            text-align: center;
+                        } */
+                        .oldprice,.tv-row p em{
+                            text-decoration: line-through;
+                            color: #b0b0b0;
+                            
+                        }
+                       
+                    </style>
                     <script>
                         $(()=>{
                             $(".arr-right").click(function() {
@@ -226,54 +294,355 @@
                     <li><a href="">超薄</a>/</li>
                     <li><a href="">智能</a>/</li>
                     <li><a href="">商用</a>/</li>
-                    <li><a href="">更多>></a></li></ul>
+                    <li><a href="" class="last">更多>></a></li></ul>
                 </div>
                 <div class="tvbanner"><a href=""><img src="../img/tvbanner.jpg" alt=""></a></div>
                 <div class="tv-row">
                     <ul>
                         <li><a href=""><img src="../img/tv1.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>43英寸全面屏电视</h4>
+                        <span>AI智能语音 / 4KHDR²</span>
+                        <p>￥1279.00 <em> ￥1899.00</em></p>
                     </li>
                     <li><a href=""><img src="../img/tv2.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>50英寸人工智能电视</h4>
+                        <span>人工智能 / 防蓝光</span>
+                        <p>￥1349.00<em>￥2199.00</em></p>
                     </li>
-                    <li><a href=""><img src="../img/tv3.png" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                    <li><a href=""><img src="../img/tv3.png" alt=""></a>                       
+                        <h4>65英寸免遥控远场语音电视</h4>
+                        <span>3GB+64GB大内存/全景AI</span>
+                        <p>￥3499.00 <em> ￥4699.00</em></p>
                     </li>
                     <li><a href=""><img src="../img/tv4.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>70英寸巨屏4K电视</h4>
+                        <span>杜比环绕 / HDR画质补偿</span>
+                        <p>￥3299.00  <em> ￥4699.00</em> </p>
                     </li>
                     <li><a href=""><img src="../img/tv1.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>43英寸全面屏电视</h4>
+                        <span>AI智能语音 / 4KHDR²</span>
+                        <p>￥1279.00 <em> ￥1899.00</em></p>
                     </li>
                     <li><a href=""><img src="../img/tv2.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>50英寸人工智能电视</h4>
+                        <span>人工智能 / 防蓝光</span>
+                        <p>￥1349.00<em>￥2199.00</em></p>
                     </li>
                     <li><a href=""><img src="../img/tv3.png" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>65英寸免遥控远场语音电视</h4>
+                        <span>3GB+64GB大内存/全景AI</span>
+                        <p>￥3499.00 <em> ￥4699.00</em></p>
                     </li>
                     <li><a href=""><img src="../img/tv4.jpg" alt=""></a>
-                        <h4></h4>
-                        <span></span>
-                        <p></p>
+                        <h4>70英寸巨屏4K电视</h4>
+                        <span>杜比环绕 / HDR画质补偿</span>
+                        <p>￥3299.00  <em> ￥4699.00</em> </p>
                     </li>
                     </ul>
                 </div>
             </div>
+            <div class="Refrigerator">
+                <div class="frg-top">
+                    <h3><img src="../img/frg.png" alt=""><a href="">冰箱</a></h3>
+                    <ul><li><a href="">双门</a>/</li> 
+                    <li><a href="">三门</a>/</li>
+                    <li><a href="">对开门</a>/</li>
+                    <li><a href="">多门</a>/</li>
+                    <li><a href="">冰柜</a>/</li>
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="frgbanner"><a href=""><img src="../img/frgbanner.jpg" alt=""></a></div>
+                <div class="frgrow">
+                    <ul class="frg-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".frg-list");
+                            $.getJSON("../server/frigerator.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="frg-item">
+                                    <div class="frg-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title">${item.title}</div>
+                                        <div class="frg-dis">${item.dis}</div>
+                                            <p class="frg-newprice frg-price">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="wash">
+                <div class="wash-top">
+                    <h3><img src="../img/wash.png" alt=""><a href="">洗衣机</a></h3>
+                  
+                    <ul><li><a href=""> 滚筒</a>/</li> 
+                    <li><a href="">波轮</a>/</li>
+                    <li><a href="">kmini迷你</a>/</li>
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="washbanner"><a href=""><img src="../img/frgbanner.jpg" alt=""></a></div>
+                <div class="washrow">
+                    <ul class="wash-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".wash-list");
+                            $.getJSON("../server/washing.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="wash-item">
+                                    <div class="wash-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title wash-tit">${item.title}</div>
+                                        <div class="frg-dis wash-dis">${item.dis}</div>
+                                            <p class="frg-newprice frg-price">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="appliances">
+                <div class="appliances-top">
+                    <h3><img src="../img/shdq.png" alt=""><a href="">生活电器</a></h3>
+                    
+                    <ul><li><a href=""> 电水壶</a>/</li> 
+                    <li><a href="">养生壶</a>/</li>
+                    <li><a href="">料理机</a>/</li>
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="appliances-banner"><a href=""><img src="../img/shdqbanner.jpg" alt=""></a></div>
+                <div class="appliancesrow">
+                    <ul class="appliances-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".appliances-list");
+                            $.getJSON("../server/appliances.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="appliances-item">
+                                    <div class="appliances-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title">${item.title}</div>
+                                        <div class="dis">${item.dis}</div>
+                                            <p class="frg-newprice frg-price">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="appliances iphone">
+                <div class="appliances-top iphone-top">
+                    <h3><img src="../img/iphonelg.png" alt=""><a href="">生活电器</a></h3>
+                    
+                    <ul><li><a href=""> 电烤箱</a>/</li> 
+                    <li><a href="">电饭煲</a>/</li>
+                    <li><a href="">电磁炉</a>/</li>
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="appliances-banner iphone-banner"><a href=""><img src="../img/iphone.jpg" alt=""></a></div>
+                <div class="appliancesrow iphonerow">
+                    <ul class="appliances-list iphone-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".iphone-list");
+                            $.getJSON("../server/iphone.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="appliances-item ip-item">
+                                    <div class="appliances-box ip-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title ip-tit">${item.title}</div>
+                                        <div class="dis">${item.dis}</div>
+                                            <p class="price frg-price">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="appliances hardware">
+                <div class="appliances-top hardware-top">
+                    <h3><img src="../img/hardware.png" alt=""><a href="">生活电器</a></h3>
+                   
+                    <ul><li><a href=""> 智能微投</a>/</li> 
+                    <li><a href="">挂架</a>/</li>
+                    <li><a href="">遥控器</a>/</li>
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="appliances-banner hardware-banner"><a href=""><img src="../img/hardwarebanner.jpg" alt=""></a></div>
+                <div class="appliancesrow hardwarerow">
+                    <ul class="appliances-list hardware-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".hardware-list");
+                            $.getJSON("../server/handware.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="appliances-item hardware-item">
+                                    <div class="appliances-box hardware-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title hardware-tit">${item.title}</div>
+                                        <div class="dis">${item.dis}</div>
+                                            <p class="price ">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="appliances iot">
+                <div class="appliances-top iot-top">
+                    <h3><img src="../img/iot.png" alt=""><a href="">智能家居</a></h3>
+                  
+                    <ul><li><a href=""> 取暖器</a>/</li> 
+                    <li><a href="">换气扇</a>/</li>
+                    <li><a href="">照明</a>/</li>
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="appliances-banner iot-banner"><a href=""><img src="../img/iotbanner.jpg" alt=""></a></div>
+                <div class="appliancesrow iot">
+                    <ul class="appliances-list iot-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".iot-list");
+                            $.getJSON("../server/iot.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="appliances-item iot-item">
+                                    <div class="appliances-box iot-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title iot-tit">${item.title}</div>
+                                        <div class="dis">${item.dis}</div>
+                                            <p class="price ">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+            <div class="appliances part">
+                <div class="appliances-top part-top">
+                    <h3><img src="../img/part.png" alt=""><a href="">智能家居</a></h3>
+                  
+                    <ul><li><a href=""> 生活萌物</a>/</li> 
+                    <li><a href="">办公好物</a>/</li>
+                    
+                    
+                    <li><a href="" class="last">更多>></a></li></ul>
+                </div>
+                <div class="appliances-banner part-banner"><a href=""><img src="../img/partbn.jpg" alt=""></a></div>
+                <div class="appliancesrow part">
+                    <ul class="appliances-list part-list">
+
+                    </ul>
+                </div>
+                <script>
+
+                        $(()=>{
+                            let ul=document.querySelector(".part-list");
+                            $.getJSON("../server/parts.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="appliances-item part-item">
+                                    <div class="appliances-box part-box" index='${item.good_id}'>
+                                        <img src=${item.src}>
+                                        <div class="frg-title part-tit">${item.title}</div>
+                                        <div class="dis">${item.dis}</div>
+                                            <p class="price ">${item.price}
+                                            <span class="oldprice">${item.oldprice}</span> 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+
+                        })
+                </script>
+
+            </div>
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -283,7 +652,7 @@
 
 
 
-
+<!-- 
     <script>
         let lis = document.querySelector(".goods-list .gl-default").querySelectorAll("div");
             let arr = [];
@@ -323,7 +692,7 @@
                 }
                 arr.push(obj);
             })
-        </script>
+        </script> -->
    
 </body>
 

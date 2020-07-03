@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tvitem.css">
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <div class="topwrap">
+        <div class="top">
+            <ul>  
+                <li><a href="">康佳新闻</a>|</li>
+                <li><a href="">加入康佳</a>|</li>
+                <li><a href="">校园招聘</a>|</li>
+                <li><a href="">康佳社区</a>|</li>
+                <li><a href="">大宗采购</a>|</li>
+                <li><a href="">积分商城</a>|</li>
+            </ul>
+            <div class="top-right">
+                <!-- 登录 -->
+                <p class="longin"><a href="login.html">
+                    登录
+                </a>|</p>
+                <!-- 注册 -->
+                <p class="singup"><a href="signup.html">
+                    注册
+                </a></p>
+
+                <div class="shopcart"><a href=""><i class="iconfont">&#xe624;</i><span> 购物车<em>(10)</em></span>
+                </a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navwrap">
+        <div class="nav">
+            <div class="logo"><img src="../img/logo.png" alt=""></div>
+            <ul class="nav-ul">
+                <li><a href="">首页</a></li>
+                <li><a href="">电视</a></li>
+                <li><a href="">冰箱</a></li>
+                <li><a href="">洗衣机</a></li>
+                <li><a href="">生活电器</a></li>
+                <li><a href="">厨卫电器</a></li>
+                <li><a href="">智能硬件</a></li>
+                <li><a href="">K迷优品</a></li>
+                <li><a href="">大宗采购</a></li>
+                <li><a href="">服务</a></li>
+                <li><a href=""><img src="https://www.konka.com/themes/pc/konka/images/header-scrae.png?vaae5" alt=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="tvcontainer">
+        <div class="glist-container">
+            <ol class="breadcrumb"></ol>
+            <div class="goods-list">
+                <div class="tvlist-nav">
+                    <div class="left"><a href="">默认</a>
+                    <a href="">价格<i></i></a>
+                    <a href="">销量</a>
+                    <a href="">好评</a>
+                    <a href="">最新</a></div>
+                    <div class="right">
+
+                    </div>
+                </div>
+                <div class="row-3">
+                    
+
+                </div>
+
+
+
+            </div>
+            <script>
+                   window.onload=function(){
+                            let ul=document.querySelector(".row-3");
+                            $.getJSON("../server/tvtv.json",(data)=>{
+                                let html=data.map(item=>{
+                                    return `
+                                    <li class="col-xs-3">
+                                    <div class="tvitem-box" index='${item.good_id}'>
+                                        <a href=""><img src=${item.src}></a>
+                                        <h4 class="tv-title">${item.title}</h4>
+                                        <div class="tv-dis">${item.dis}</div>
+                                            <p class="tv-price">${item.price} 
+                                            </p>  
+                                    </div>                       
+                                    </li>`    
+                                }).join("");
+                                ul.innerHTML=html;              
+                            })
+                        }
+
+
+            
+
+           
+            </script>
+            <style>
+                .col-xs-3{
+                    font-size: 14px;
+                    float: left;
+                }
+                .row-3{
+                    margin-left: -20px;
+                }
+                .tvitem-box{
+                    background: #fff;
+                    padding: 10px;
+                    height: 320px;
+                    width: 250px;
+                    margin: 0 0 20px 20px;
+                    text-align: center;
+                }
+                .tvitem-box img{
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 auto;
+                }
+                .tvitem-box h4{
+                    width: 250px;
+                    height: 35px;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    padding: 0 10px;
+                   
+                    line-height: 35px;
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    box-sizing: border-box;
+                }
+                .tv-dis{
+                    width: 230px;
+                    height: 47px;
+                    padding: 0 10px;
+                 
+                    color: #989898;
+                    font-size: 14px;
+                    overflow: hidden;
+                    white-space: inherit;
+                    text-overflow: ellipsis;
+                    height: 47px;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box;
+                    line-height: 22px;
+                }
+                .tv-price{
+                    color: #da2a2a;
+                }
+               
+
+            </style>
+        </div>
+        
+    </div>
+
+</body>
+</html>
